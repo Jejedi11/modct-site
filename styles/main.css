@@ -1,63 +1,191 @@
 :root {
-    --text-color: white;
-    --accent1: #B4381F;
-    --accent2: #5D5F53;
-    --accent3: #DF8922;
-    --accent4: #D02607;
-    --accent5: #363338;
+    --text-color: #F7F7F7;
+    --primary: #9B2E2E; /* warm, muted red */
+    --bg-1: #4A4C48; /* main background */
+    --bg-2: #3B3B3B; /* darker surface */
+    --muted: #D9A94F; /* accent / highlight */
+    --max-width: 1100px;
+    --radius: 10px;
+    --transition-speed: 200ms;
+}
+
+/* Reset and base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    background-color: var(--accent2);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, var(--bg-1) 0%, #474946 60%);
+    color: var(--text-color);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Header / Navigation */
 header {
-    background-color: var(--accent5);
-    width: 100%;
-    height: auto;
+    background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(0,0,0,0.06));
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
 }
 
 nav {
     display: flex;
-    padding: 15px;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: var(--text-color);
     text-decoration: none;
-    background-color: var(--accent1);
-    padding: 20px;
-    border: solid var(--accent5);
+    background-color: var(--primary);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.18);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.20);
 }
 
-p, h1, h2 {
+nav a:hover,
+nav a:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.34);
+    /* darker primary for hover (widely supported) */
+    background-color: #7a2525;
+    outline: none;
+}
+
+nav a:focus-visible {
+    outline: 3px solid rgba(255,255,255,0.08);
+    outline-offset: 4px;
+}
+
+/* Content container */
+main {
+    max-width: var(--max-width);
+    margin: 28px auto;
+    padding: 0 16px 48px;
+}
+
+h1, h2, p, a {
     color: var(--text-color);
 }
 
+/* Scoped link styles for content (nav links are styled separately) */
+main a {
+    color: var(--muted);
+    text-decoration: underline;
+}
+
+main a:hover,
+main a:focus {
+    opacity: 0.95;
+}
+
+/* Hero / Banner */
 .banner {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(59,59,59,0.06), rgba(0,0,0,0.06));
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.32);
 }
 
 .banner-text {
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    flex: 1 1 360px;
 }
 
 .banner-text h1 {
-    justify-self: center;
+    margin: 0;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    line-height: 1.05;
+}
+
+.banner-text p {
+    margin: 0;
+    max-width: 60ch;
+    opacity: 0.95;
 }
 
 .banner img {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    object-fit: cover;
 }
 
+/* Footer */
 footer {
-    background-color: var(--accent5);
-    display: flex;
+    background-color: var(--bg-2);
+    color: rgba(255,255,255,0.92);
+    padding: 18px 12px;
+    text-align: center;
+    margin-top: 36px;
 }
 
-footer a, p {
-    padding: 10px;
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Utility helpers */
+.card {
+    background: rgba(0,0,0,0.12);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Responsive rules */
+@media (max-width: 880px) {
+    .banner {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner img {
+        max-width: 420px;
+        width: 90%;
+    }
+
+    nav {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+
+    main {
+        margin: 18px auto;
+        padding-bottom: 28px;
+    }
 }
