@@ -4,10 +4,32 @@ body {
   margin: 0;
 }
 
+header {
+  background-color: blueviolet;
+}
+
 nav {
   background-color: cyan;
-  display: flex;
+  display: none;
   flex-direction: column;
+  text-align: center;
+}
+
+nav.open {
+  display: flex;
+}
+
+#menu {
+  height: 3rem;
+  width: 3rem;
+}
+
+#menu::before {
+  content: "☰"
+}
+
+#menu.open::before {
+  content: "X";
 }
 
 nav a {
