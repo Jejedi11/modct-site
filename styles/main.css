@@ -6,6 +6,8 @@ body {
 
 header {
   background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 nav {
@@ -20,8 +22,11 @@ nav.open {
 }
 
 #menu {
-  height: 3rem;
-  width: 3rem;
+  height: auto;
+  width: 4rem;
+  grid-column: 5 / -1;
+  justify-self: end;
+  font-size: 2rem;
 }
 
 #menu::before {
@@ -32,6 +37,49 @@ nav.open {
   content: "X";
 }
 
+#logo {
+  justify-self: center;
+}
+
+#youtube {
+  grid-column: 2 / 3;
+  justify-self: center;
+  padding: 0.8rem;
+  }
+
+#youtube img {
+  width: 2.5rem;
+  height: auto;
+}
+
+nav {
+  grid-column: 1 / -1;
+}
+
 nav a {
+  padding: 1rem;
+}
+
+.banner-text {
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.banner-text p {
+  padding: 1rem;
+}
+
+.events div {
+  padding: 2rem;
+  background-color: rgb(190, 190, 241);
+  margin: 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: blueviolet;
   padding: 1rem;
 }
