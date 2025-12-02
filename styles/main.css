@@ -39,17 +39,7 @@ nav.open {
 
 #logo {
   justify-self: center;
-}
-
-#youtube {
-  grid-column: 2 / 3;
-  justify-self: center;
-  padding: 0.8rem;
-  }
-
-#youtube img {
-  width: 2.5rem;
-  height: auto;
+  margin-left: 1rem;
 }
 
 nav {
@@ -58,13 +48,11 @@ nav {
 
 nav a {
   padding: 1rem;
+  padding-top: 1.5rem;
 }
 
 .banner-text {
   padding: 1rem;
-}
-
-h1 {
   text-align: center;
 }
 
@@ -76,6 +64,10 @@ h1 {
   padding: 2rem;
   background-color: rgb(190, 190, 241);
   margin: 1rem;
+}
+
+.events h2 {
+  margin-left: 1rem;
 }
 
 footer {
