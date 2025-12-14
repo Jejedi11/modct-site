@@ -1,33 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us</title>
-        <meta name="description" content="Home page for the Make our dreams come true group.">
-        <meta name="author" content="James Michelson">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/main-large.css">
-        <script defer src="scripts/main.js"></script>
-    </head>
-    <body>
-        <header>
-            <h2 id="logo">MODCT</h2>
-            <button id="menu" aria-label="Open Menu Button"></button>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="http://roachplus.makeourdreamscometrue.com">Roachplus</a>
-                <a href="miriam-webster.html">Miriam-Webster</a>
-                <a href="newsletter.html">MODCT Newsletter</a>
-                <a href="about.html">About Us</a>
-                <a href="more.html">More</a>
-            </nav>
-        </header>
-        <main>
-            
-        </main>
-        <footer>
-            <p>Make Our Dreams Come True©</p>
-        </footer>
-    </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <meta name="description" content="The About us page for MODCT.">
+  <meta name="author" content="James Michelson">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main-large.css">
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/getdates.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h2 id="logo">MODCT</h2>
+    <button id="menu" aria-label="Open Menu Button"></button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="miriam-webster.html">Miriam-Webster</a>
+      <a href="newsletter.html">MODCT Newsletter</a>
+      <a href="about.html">About Us</a>
+      <a href="more.html">More</a>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+      <h1>About Us</h1>
+    </div>
+    <div id="profiles">
+      <div class="profile">
+        <h1>James Michelson</h1>
+        <h2>Web Developer</h2>
+        <img src="images/james-michelson.webp" alt="James Michelson" loading="lazy" width=200 height=200>
+        <p>The man responsible for this page, he enjoys computers and nature. He only uses linux and is fond of games.
+          He enjoys spending time with family and friends.</p>
+      </div>
+      <div class="profile">
+        <h1>Spencer D. Michelson</h1>
+        <h2>Executive Music Producer</h2>
+        <img src="images/spencer-michelson.webp" alt="Spencer D. Michelson" loading="lazy" width=200>
+        <p>Singing since age 8 and making music since age 14, he is now working on perfecting mixing and mastering. He
+          is a talented musician who has created everything from hip-hop and rap to orchestral compositions. His goal is
+          to make great music that evokes emotion in the audience and creates long-lasting memories.
+
+          Writer, composer, sound designer, director, thinker, avid MrBeast fan, YouTuber, Smash Bros player, music
+          artist, Nintendo collector, Botswana's premier online university graduate, social media influencer, and
+          beginning fencer.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      ©<span id="current-year"></span> | James Michelson | Arizona
+    </p>
+    <p>
+      <span id="last-populated"></span>
+    </p>
+  </footer>
+</body>
+
 </html>

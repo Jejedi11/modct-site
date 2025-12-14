@@ -1,36 +1,55 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <title>Miriam-Webster</title>
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/main-large.css">
-    </head>
-    <body>
-        <header>
-            <h2 id="logo">MODCT</h2>
-            <button id="menu" aria-label="Open Menu Button"></button>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="http://roachplus.makeourdreamscometrue.com">Roachplus</a>
-                <a href="miriam-webster.html">Miriam-Webster</a>
-                <a href="newsletter.html">MODCT Newsletter</a>
-                <a href="about.html">About Us</a>
-                <a href="more.html">More</a>
-            </nav>
-        </header>
-        <main>
-            <div class="banner-text">
-                <h1>Miriam-Webster</h1>
-                <p>If you have ever watched our films or talked with us you may have noticed that we use some peculiar words and phrases. This is a collection of the most common words and expressions.</p>
-            </div>
-            <section>
-                <h2>Slopism</h2>
-                <p>An abstract concept that can be further explored in <a href="great-futures">Great Futures</a>, by Spencer Michelson.</p>
-            </section>
-        </main>
-        <footer>
-            <p>Make Our Dreams Come True©</p>
-        </footer>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miriam-Webster</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main-large.css">
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/miriam-webster.js"></script>
+  <script defer src="scripts/getdates.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <meta name="author" content="James Michelson">
+  <meta name="description" content="A dictionary of words and phrases that are unique to us or uncommon.">
+</head>
+
+<body>
+  <header>
+    <h2 id="logo">MODCT</h2>
+    <button id="menu" aria-label="Open Menu Button"></button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="miriam-webster.html">Miriam-Webster</a>
+      <a href="newsletter.html">MODCT Newsletter</a>
+      <a href="about.html">About Us</a>
+      <a href="more.html">More</a>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+      <h1>Miriam-Webster</h1>
+      <p>If you have ever watched our films or talked with us you may have noticed that we use some peculiar words and
+        phrases. Many of these we made up, so we thought we would make a small dictionary, miriam-webster (named after
+        our cousin Miriam).</p>
+    </div>
+    <section class="entrys">
+      <h2>Entrys:</h2>
+    </section>
+  </main>
+  <footer>
+    <p>
+      ©<span id="current-year"></span> | James Michelson | Arizona
+    </p>
+    <p>
+      <span id="last-populated"></span>
+    </p>
+  </footer>
+</body>
+
 </html>
